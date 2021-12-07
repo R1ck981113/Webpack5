@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+// 为什么要用构造函数？（因为前面两种方式创建对象都只能以此创建一个对象） 构造函数里面封装的是对象
+//构造函数 就是我们把对象里面一些相同的属性和方法抽象出来封装到函数里
+//例：我们需要创建四大天王的对象 相同的属性： 名字 年龄 性别 相同的方法：唱歌
+
+function Star(uname,age,sex){//构造函数名字 首字母必定是大写
+     this.name = uname;
+     this.age = age; 
+    this.sex = sex;
+}
+var lAndy = new Star('刘德华',18,'男');
+console.log(typeof lAndy);
+console.log(lAndy.name);
+console.log(lAndy.sex);
+
+//构造函数不需要return就可以返回结果
+
+//构造函数和对象的区别
+//首先 对象是一个具体的事物 有着各类具体的属性值
+//利用构造函数创建对象的过程我们也称为对象的实例化（因为采用到了new关键字）
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

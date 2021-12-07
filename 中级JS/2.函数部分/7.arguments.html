@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+//当我们不知道有多少个参数传递的时候 可以用arguments来进行获取 
+//所有函数都内置了一个arguments对象 对象中存储了传递的所有实参
+//arguments展示形式是一个伪数组 因此可以进行遍历。伪数组具有以下特点
+//1 具有length属性 2 按索引方式存储数据 3 不具有数组的push,pop等方法
+function fn(){
+console.log(arguments);//里面了存储了所有传递过来的实参
+console.log(arguments.length);
+}
+
+fn(1,2,3)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

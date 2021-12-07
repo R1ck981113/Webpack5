@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div id="time">2019-9-9</div>
+    <ul>
+        <li>rick</li>
+        <li>rick2</li>
+        <li>rick3</li>
+        <li>rick4</li>
+        <li>rick5</li>
+    </ul>
+</body>
+<script>
+  var get = document.getElementById('time')//要加引号
+  console.log(get);
+  console.log(typeof get);//返回的是一个元素对象
+  console.dir(get);//通过dir打印返回的元素对象 更好的查看里面的属性和方法
+
+  var get2 = document.getElementsByTagName('li');
+  console.log(get2);
+  console.log(get2[2]);
+
+  //getElementsByClassName 根据类名获得某些元素的集合
+  //querySelector 返回只当选择器的第一个元素对象
+  //querySelectorAll 返回指定选择器所有元素对象的集合
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //实现九九乘法表
+        //外层控制行数i, 循环9次，可以打印9行  
+        //内层控制每行的公式 j
+        //核心算法：每行的个数和行数是一致的（第一行 一个公式 第二行 二个公式）
+        var str = '';
+        for(var i=1;i<=9;i++){// 外层循环控制行数
+            for(var j=1;j<=i;j++){//里层循环控制每一行的个数
+      str += i + '×' + j +'='+ i*j+'\t';//字符串拼接
+            }
+            str +='\n';
+        }
+        console.log(str);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

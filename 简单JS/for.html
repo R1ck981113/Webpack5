@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+//1.求1~100之间所有数的平均值
+var sum = 0;
+var average = 0;
+for(var i=1;i<=100;i++){
+    sum = sum + i;
+}
+average = sum/100;
+console.log(average);
+
+//2.求1~100之间所有偶数和奇数的和 
+var even = 0;
+var odd = 0;
+for(var i =1;i<=100;i++){
+if(i%2 == 0){
+    even = even + i;
+}else{
+    odd = odd + i;
+}
+}
+console.log('偶数之和：'+even);
+console.log('奇数之和：'+odd);
+
+//3.求1~100之间所有能被3整除的数字的和
+var result = 0;
+for(var i=1;i<+100;i++){
+    if(i%3 ==0){
+        result = result + i;
+    }
+}
+console.log('被3整除之和'+result);
+
+//4.求学生成绩的案例
+
+var num = prompt('请输入班级的总人数');
+var sum = 0;
+var average = 0;//求平均值
+for(var i=1;i<=num;i++){
+   var score = prompt('请输入第'+i+'个学生的成绩');
+   sum = sum + parseFloat(score);//prompt中的是字符串 给它转换成数字型
+}
+average = sum / num;
+alert('班级总成绩是'+sum);
+alert('班级平均分是'+average);
+    </script>
+
+   
+</head>
+<body>
+    
+</body>
+</html>

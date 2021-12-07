@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+//把arr 的最后一个元素取出来给新数组作为第一个使用
+var arr = ['red','green','blue','pink','purple']
+var newArr = [];
+for(var i=arr.length-1;i >=0 ;i--){//数组长度永远比下标大1
+      newArr[newArr.length] = arr[i]
+
+}
+console.log(newArr);
+
+
+
+
+// arr.reverse();
+// console.log(arr);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

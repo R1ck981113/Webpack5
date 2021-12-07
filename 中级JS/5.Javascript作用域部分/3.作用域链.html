@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+//任何代码都有作用域链
+//如果函数中套娃了函数 那么会生成新的作用域
+var num = 10;//全局作用域
+
+function fn(){//外部函数
+    var num = 20;
+
+    function fun(){//内部函数  内部函数是可以访问外部函数的变量的
+    console.log(num);//这里访问的是20 就近原则
+
+
+    }
+    fun();//内部函数在外部函数作用域里面进行调用 只有调用才会执行
+}
+fn();
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>

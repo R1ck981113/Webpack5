@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //方法一
+// //将数组中的大于等于X或者小于等于X的元素选出来 放入新的数组
+//   var arr = [2,0,6,1,77,0,52,0,25,7];
+//   var newArr=[];
+//   var j=0;
+//   for(var i=0;i<arr.length;i++){
+
+// if(arr[i]>10){
+//     //新数组应该从0开始一次递增  newArr[i]=arr[i]是错误的写法（因为直接从4开始存，那么前四个都为空）
+//     newArr[j]=arr[i];
+//     j++;
+// }   
+//   }
+//   console.log(newArr);
+
+//方法二
+var arr = [2,0,6,1,77,0,52,0,25,7];
+var newArr=[];
+for(var i=0;i<arr.length;i++){
+    if(arr[i]>=10){
+    newArr[newArr.length]=arr[i];//newArr的默认长度为0 根据索引的原理 newArr的长度一直在变化 从而进行套娃
+    }
+}
+console.log(newArr);    </script>
+</head>
+<body>
+    
+</body>
+</html>

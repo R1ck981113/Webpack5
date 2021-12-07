@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+//简述：就是变量在某个范围内起作用和效果 目的是为了提高程序的可靠性 减少命名冲突
+//全局作用域：覆盖了整个script标签 或者是一个单独的.js文件
+//局部作用域：该变量只在函数的内部起作用
+var num = 10;
+console.log(num);
+function fn(){
+    //局部作用域
+    var num = 20;
+    console.log(num);
+}
+fn();
+</script>
+</head>
+<body>
+    
+</body>
+</html>

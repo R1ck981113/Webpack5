@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+function getMax()
+{
+var max = arguments[0];
+for(i=1;i<=arguments.length;i++){//依次遍历比较
+    if(arguments[i]>max){
+        max = arguments[i];
+    }
+}
+return max;
+}
+console.log(getMax(1,2,3,12312313));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
