@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .uname{
+            border-radius: 25px;
+            display: block;
+          
+        }
+       .message{
+           font-size: 15px;
+           margin-left: 30px;
+           font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+       }
+       .rick{
+           border: solid black 1px;
+           height: 400px;
+           border-radius: 40px;
+           background-color: burlywood;
+       }
+       .right{
+           color: green;
+       }
+       .wrong{
+           color: red;
+       }
+    </style>
+    <script>//率先渲染
+
+    </script>
+</head>
+<body>
+    <h1 style="font-size: medium;margin-left: 40px;">CheckOut</h1>
+    <input type="text" class="uname"><span class="message">Put Username</span>
+    <div class="rick"></div>
+</body>
+<script>
+//操纵DOM等操作
+var reg = /^[a-zA-Z0-9_-]{6,16}$/;
+
+var uname = document.querySelector('.uname');
+var span = document.querySelector('span')
+uname.onblur = function(){ //鼠标失去焦点则立即开始判断
+  if(reg.test(this.value)){//this指向uname这个调用函数的变量
+      console.log('Right');
+      span.className='right';//单引号
+      span.innerHTML='BINGO';
+  }else{
+      console.log('Wrong');
+      span.className='wrong';//单引号
+      span.innerHTML='TRY AGAIN';
+  }
+}
+</script>
+</html>

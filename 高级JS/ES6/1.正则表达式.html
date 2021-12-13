@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>//率先渲染
+
+    </script>
+</head>
+<body>
+    
+</body>
+<script>
+//操纵DOM等操作
+var reg = /^[a-zA-Z0-9_-]$/; 
+console.log(reg.test('a'));   //利用test()方法来检验正则表示中表单验证方式
+console.log(reg.test('!'));
+
+var reg = /^[^a-zA-Z0-9_-]$/; //此时在中括号中写了^，此时不为边界符，这个符号代表取相反值
+console.log(reg.test('a'));  
+console.log(reg.test('!'));
+ 
+ //量词符：用来设定某个模式出现的次数 可以通过符号和花括号来表示
+// var reg= /^a$/;
+ var reg1 = /^a$/;
+console.log(reg1.test('a'));  //true
+console.log(reg1.test('aaa'));  //F
+
+var reg2 = /^a*$/; //*出现>=0
+console.log(reg2.test('a'));  //T
+console.log(reg2.test('aaa'));  //F
+
+//+表示出现次数>=1
+//?表示1||0次
+//{3} 重复3次
+//{3，} 大于等于3
+//{3，16} 大于等于3小于等于16
+
+</script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+    <script>//率先渲染
+
+    </script>
+</head>
+<body>
+    
+</body>
+<script>
+// //操纵DOM等操作
+// var arr= [];
+// for(var i=0;i<2;i++){
+//     arr[i] = function(){//在数组中放入函数
+//         console.log(i);
+//     } //循环没终止时 是无法进入下面的进程 只有i=2时 才能结束循环
+// }
+// arr[0]();//函数数组直接调用 2
+// arr[1]();//2
+
+
+
+let arr= [];
+for(let i= 0;i < 2;i++){
+    arr[i] = function(){
+        console.log(i);
+    }
+}
+arr[0]();
+arr[1]();
+</script>
+</html>
