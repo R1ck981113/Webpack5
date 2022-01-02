@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+ function getName(){
+     console.log(this.name);
+ }
+
+ let getName2 = () =>{
+     console.log(this.name);
+ }
+
+ window.name = 'rick';
+ const school = {
+     name:'body'
+ }
+
+ getName2();
+ getName();
+ getName.call(school);
+ getName2.call(school);
+    </script>
+</html>

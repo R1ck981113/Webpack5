@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //初始化 成功 失败
+    const p =new Promise(function(resolve,reject){
+        setTimeout(function(){
+             let data = '数据库中的数据';
+             let err = '数据读取失败';
+             reject(err);
+            //  resolve(data);
+        },3000)
+    });
+
+    p.then(function(value){
+       console.log(value);
+    },function(reason){
+   console.error(reason);
+    })
+</script>
+</html>
