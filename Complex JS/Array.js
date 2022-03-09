@@ -128,11 +128,137 @@ function map1(){
     } 
 ]
 
-   let result1 = arr.map((a,b,c)=>{
-       console.log(a,b,c);
+   let result1 = arr.map((a,b,c)=>{//a是当前数组，b是下标,c数组本身
+    console.log(a,b,c);
+    return a*10   
    })
-   
+   console.log(result1);
+   console.log(arr);//不动原数组
+}
+// map1()
+
+//7.lastindexof() 元素最后一次出现的索引
+//8.indexOf() 元素第一次出现的索引
+function Getindex(){
+    let arr = [12,45,645,53,55]
+    let arr2 = ['rick','rock','jason','rock']
+    let arr3 = [{
+        code:1,
+        str:'rick'
+    },
+    {
+        code:2,
+        str:'rock'
+    }]
+    const result1 = arr2.lastIndexOf('rock')
+    const result2 = arr2.indexOf('rock')
+    console.log(result2);
+    console.log(result1);
+}
+// Getindex()
+
+//9.findIndex() 返回符合条件的索引并且不检查剩余的值 升级版的indexOf()和lastindexof()
+function Getinedxplus(){
+    let arr = [12,45,645,53,55]
+    let arr2 = ['rick','rock','jason','rock']
+    let arr3 = [{
+        code:1,
+        str:'rick'
+    },
+    {
+        code:2,
+        str:'rock'
+    }]
+  const result1 =  arr3.findIndex((a,b,c)=>{
+       console.log(a,b,c);
+       return a.code === 2  //切记全等  如果找不到就返回-1
+
+   })
+   console.log(result1);
 }
 
-map1()
+
+// Getinedxplus()
+
+//10. filter() 过滤器 返回符合条件的所有数组元素并形成新数组
+
+function filter1(){
+     let arr = [{
+        code:1,
+        str:'rick',
+        num:100
+    },
+    {
+        code:2,
+        str:'rock'
+    },
+    {
+        code:3,
+        str:'rick',
+        num:1000
+    },
+]
+
+const result1 = arr.filter((a)=>{
+    return a.str === 'rick'
+})
+
+console.log(result1);
+}
+// filter1()
+
+//11.join()  转字符串 不改变原数组
+
+function join1(){
+    let arr2 = ['rick','rock','jason','rock']
+    const result = arr2.join('and')
+    console.log(result);
+}
+// join1()
+
+//12.toString() 转字符串 不改变原数组   join是toString的升级版
+function tostring1(){
+    let arr2 = ['rick','rock','jason','rock']
+    const result = arr2.toString()
+    console.log(result);
+}
+// tostring1()
+
+function Json1(){
+    let arr2 = [
+        2,4,5
+    ]
+    let arr = [{
+        code:1,
+        str:'rick',
+        num:100
+    },
+    {
+        code:2,
+        str:'rock'
+    },
+    {
+        code:3,
+        str:'rick',
+        num:1000
+    },
+]
+
+let myJson = JSON.stringify(arr)
+localStorage.setItem('textjson',myJson)
+
+let myJson1 = JSON.stringify(arr2)
+localStorage.setItem('textjson1',myJson)
+
+let text = localStorage.getItem('textjson');
+let obj2 = JSON.parse(text)
+
+let text2 = localStorage.getItem('textjson1')
+let obj3 = JSON.parse(text2)
+
+console.log(obj2);
+console.log(obj3);
+}
+
+Json1()
  $("#div1").hide()
