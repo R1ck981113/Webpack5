@@ -1,0 +1,16 @@
+.box1{
+    width: 200px;
+    height: 100px;
+    border: 1px solid #333333;
+    background-color: orange;
+    background-image: url('../images/1.jpg');
+    background-size: cover;
+}
+.box3{
+    width: 200px;
+    height: 100px;
+    border: 1px solid #333333;
+    background-color: blue;
+    background-image: url('../images/2.jpg');
+    background-size: cover;
+}
